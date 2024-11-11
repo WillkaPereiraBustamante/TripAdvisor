@@ -1,1 +1,1 @@
-Projet TripAdvisor + modale + responsive
+TripAdvisor front project + modal + responsive
