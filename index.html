@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripAdvisor 🌈</title>
+    <link rel="icon" href="./assets/img/tripadvisor-icon.svg">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/icons.css" />
+    <script src="https://kit.fontawesome.com/3633ac7747.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="container navigation">
+                <i class="icon-menu_bars navElmt768px"></i>
+                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/Tripadvisor_logo.svg" alt="logo tripadvisor">
+                <nav>
+                    <div class="navElmt">
+                        <i class="icon-pencil"></i>
+                        <span>Avis</span>
+                    </div>
+                    <div class="navElmt">
+                        <i class="icon-heart"></i>
+                        <span>Voyages</span>
+                    </div>
+                    <div class="navElmt">
+                        <i class="icon-notification_bell"></i>
+                        <span>Alertes</span>
+                    </div>
+                    <div id="contact-modal-open" class="button">
+                        <span>Connectez-vous</span>
+                    </div>
+                    <div class="navElmt">
+                        <i class="icon-empty_cart"></i>
+                        <span>Panier</span>
+                    </div>
+                </nav> 
+                <div class="navElmt768px">
+                    <i class="icon-search"></i>
+                    <i class="icon-empty_cart"></i>
+                </div>
+            </div> 
+        </div>
+    </header>
+
+    <main >
+        <div class="container">
+            <h1><span>Explorez</span> Paris</h1>
+            <div class="sousTitre">
+                <p>Les revenus influencent le choix des expériences présentées sur cette page : <a href="#">en savoir plus</a>.</p>
+            </div>
+            <div class="navigation2">
+                <div class="nav2elmt">
+                    <span>Hôtels</span>
+                    <i class="icon-hotels"></i>
+                </div>
+                <div class="nav2elmt">
+                    <span>Locations de vacances</span>
+                    <i class="icon-vacation_rentals"></i>
+                </div>
+                <div class="nav2elmt">
+                    <span>Activités</span>
+                    <i class="icon-attractions"></i>
+                </div>
+                <div class="nav2elmt">
+                    <span>Restaurants</span>
+                    <i class="icon-restaurants"></i>
+                </div>
+                <div class="nav2elmt">
+                    <span>Forums de voyage</span>
+                    <i class="icon-forums"></i>
+                </div>
+                <div class="nav2elmt nav2elmt1024px">
+                    <span>Vols</span>
+                    <i class="icon-flights"></i>
+                </div>
+                <div class="nav2elmt nav2elmt1024px">
+                    <span>Croisières</span>
+                    <i class="icon-cruises"></i>
+                </div>
+                <div class="nav2elmt">
+                    <span>Plus</span>
+                    <i class="icon-more_horizontal"></i>
+                </div>
+            </div>
+
+            <div class="pictures">
+                <div class="left-picture">    
+                    <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/view.jpg" alt="">
+                </div>
+                <div class="right-column">
+                  <div>
+                    <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/caption-8.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/caption-9.jpg" alt="">
+                  </div>
+                </div>
+                <div class="pictures-button">
+                    <i class="icon-photo"></i>
+                    <span>Toutes les photos</span>
+                </div>
+            </div>
+
+            <div class="menu">
+                <div class="firstMenu">
+                    <div>
+                        <span><a href="*">Europe</a></span>
+                        <i class="icon-single_chevron_right"></i>
+                    </div>
+                    <div>
+                        <span><a href="*">France</a></span>
+                        <i class="icon-single_chevron_right"></i>
+                    </div>
+                    <div>
+                        <span><a href="*">Île-de-France</a></span>
+                        <i class="icon-single_chevron_right"></i>
+                    </div>
+                    <div>
+                        <a href="*"><span>Paris</span></a>
+                       <i class="icon-caret_down"></i>
+                    </div>
+                </div>
+           
+                <div>
+                    <span>Visiter</span>
+                    <span>:</span>
+                    <span>Paris</span>
+                </div>
+            </div>
+
+            <section class="main-description">
+                <div class="main-description-col1">
+                  <h2>La Ville Lumière éblouit en tous points</h2>
+                  <p>
+                    Aucun autre endroit au monde ne fait autant rêver que Paris. La
+                    ville séduit par son art, son architecture, sa culture et sa
+                    cuisine, mais il y a aussi des merveilles plus discrètes qui
+                    n’attendent qu’à être explorées : les ruelles pavées pittoresques,
+                    les pâtisseries au coin de la rue et les petits bistrots douillets
+                    qui vous invitent à boire un verre de beaujolais. Préparez-vous à
+                    vous approprier Paris.
+                  </p>
+                </div>
+                <div class="main-description-col2">
+                  <div class="map-description">
+                    <h3>Paris : commencez à organiser !</h3>
+                    <p>
+                      Créez un voyage pour enregistrer et organiser toutes vos idées et
+                      les visualiser sur une carte.
+                    </p>
+                    <button>Créez un voyage</button>
+                  </div>
+                  <div class="map"><img src="https://tripadvisor-lereacteur.netlify.app/assets/img/image_trips_card_medium.png" alt=""></div>
+                </div>
+              </section>
+
+            <!-- <div class="description">
+                <div class="column1">
+                    <h2>La Ville Lumière éblouit en tous points</h2>
+                    <p>Aucun autre endroit au monde ne fait autant rêver que Paris. La ville séduit par son art, son architecture, sa culture et sa cuisine, mais il y a aussi des merveilles plus discrètes qui n’attendent qu’à être explorées : les ruelles pavées pittoresques, les pâtisseries au coin de la rue et les petits bistrots douillets qui vous invitent à boire un verre de beaujolais. Préparez-vous à vous approprier Paris.</p>
+                </div>
+                <div class="column2">
+                    <div class="columnBlock">
+                        <div class="col2first">
+                            <h3>Paris : commencez à organiser !</h3>
+                            <p>Créez un voyage pour enregistrer et organiser toutes vos idées et les visualiser sur une carte.</p>
+                            <button>Créez un voyage</button>
+                        </div>
+                        <div class="col2second">
+                            <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/image_trips_card_medium.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <section class="section-1">
+                <h2>Paris : les immanquables</h2>
+                <div>
+                    <div class="section-1-col-1">
+                        <h4>Se divertir</h4>
+                        <p>Des lieux à voir, des rues à explorer et des expériences emblématiques à Paris.</p>
+                        <a href="*">Tout afficher</a>
+                    </div>
+                    <div class="section-1-col-2">
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/eiffeltoren.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/arc-de-triomphe-at-night.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/louvre.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/the-bookstore.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/the-bookstore.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/the-bookstore.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="section-1-col-1">
+                        <h4>Se restaurer</h4>
+                        <p>Bistrots et bars typiques, et plus encore à Paris.</p>
+                        <a href="*">Tout afficher</a>
+                    </div>
+                    <div class="section-1-col-2">
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/meal6.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/meal5.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/meal4.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/the-bookstore.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/the-bookstore.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                        <div class="carrousel-col">
+                            <div class="carrousel-col-img">
+                                <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/the-bookstore.jpg" alt="">
+                                <div class="circle">
+                                    <i class="icon-heart"></i>
+                                </div>
+                                <div class="owl-2024">
+                                    <i class="icon-travelers_choice_badge"></i>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                                <a href="*"><h5>Tour Eiffel</h5></a>
+                                <div class="rating">
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_full"></i>
+                                    <i class="icon-bubble_rating_half"></i>
+                                    <span>139 901</span>
+                                </div>
+                                <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-2">
+                <h2>Guides de voyageurs</h2>
+                <div class="section-2-all">
+                    <div class="section-2-elmt">
+                        <div class="section-2-elmt-image">
+                            <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/visit1.jpg" alt="">
+                        </div>
+                        <h5>Best summer things to do in Paris | Eatwith</h5>
+                        <p>36 articles</p>
+                        <div class="section-2-elmt-logo">
+                            <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/forks-icon.jpg" alt="">
+                            <span>Par</span><span>Eatwith</span>
+                        </div>
+                    </div>
+                    <div class="section-2-elmt">
+                        <div class="section-2-elmt-image">
+                            <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/visit2.jpg" alt="">
+                        </div>
+                        <h5>Les 10 monuments et musées de Paris à faire</h5>
+                        <p>10 articles</p>
+                        <div class="section-2-elmt-logo">
+                            <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/topito-com.jpg" alt="">
+                            <span>Par</span><span>Topito</span>
+                        </div>
+                    </div>
+                    <div class="section-2-elmt">
+                        <div class="section-2-elmt-image">
+                            <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/visit3.jpg" alt="">
+                        </div>
+                        <h5>Top 10 des choses à faire ou à voir dans le 14ème</h5>
+                        <p>16 articles</p>
+                        <div class="section-2-elmt-logo">
+                            <img src="https://tripadvisor-lereacteur.netlify.app/assets/img/topito-com.jpg" alt="">
+                            <span>Par</span><span>Topito</span>
+                        </div>
+                    </div>
+                </div>   
+            </section>
+        </div>
+    </main>
+
+<!-- MODAL-FORM -->
+ <div id="modal" class="modal-container display-none">
+    <div class="modal">
+
+        <p>Formulaire de contact</p>
+
+        <form id="contact-form">
+
+                <input type="text" name="firstname" id="firstname" placeholder="Prénom" />
+
+                <input type="text" name="lastname" id="lastname" placeholder="Nom" />
+
+                <input type="text" name="email" id="email" placeholder="Email" />
+
+                <textarea
+                    name="message"
+                    placeholder="Écrivez ici votre message... "
+                    id="message"
+                    cols="30"
+                    rows="10"
+                ></textarea>
+
+            <button id="contact-modal-send" type="submit">Envoyer le formulaire</button>
+        </form>
+
+        <i id="contact-modal-close" class="icon-times"></i>
+    </div>
+</div>
+
+<!-- FOOTER -->
+
+    <footer>
+        <div class="footer">
+            <div class="footer-img">
+                <img src="./assets/img/tripadvisor-icon.svg" alt="logo"> 
+            </div>
+            <p>Made at <a href="https://www.lereacteur.io/">Le Reacteur</a> by <a href="https://github.com/WillkaPereiraBustamante">Willka PEREIRA BUSTAMANTE</a></p>
+
+        </div>
+    </footer> 
+
+
+<script src="./assets/js/index.js"></script>
+
+</body>
+</html>
